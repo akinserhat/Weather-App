@@ -28,6 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         weatherVC.title = "Weather"
         return UINavigationController(rootViewController: weatherVC)
     }
+    
 }
 
     func sceneDidDisconnect(_ scene: UIScene) {

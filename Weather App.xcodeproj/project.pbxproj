@@ -18,6 +18,7 @@
 		1294D64529647BA40016E156 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1294D64429647BA40016E156 /* WeatherData.swift */; };
 		1294D64C29647DD90016E156 /* WButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1294D64B29647DD90016E156 /* WButton.swift */; };
 		1294D64E29647E0B0016E156 /* WTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1294D64D29647E0B0016E156 /* WTextField.swift */; };
+		12F5282229673E4400F1BC84 /* WLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F5282129673E4400F1BC84 /* WLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		1294D64429647BA40016E156 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		1294D64B29647DD90016E156 /* WButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WButton.swift; path = "Weather App/WButton.swift"; sourceTree = SOURCE_ROOT; };
 		1294D64D29647E0B0016E156 /* WTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTextField.swift; sourceTree = "<group>"; };
+		12F5282129673E4400F1BC84 /* WLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			children = (
 				1294D64B29647DD90016E156 /* WButton.swift */,
 				1294D64D29647E0B0016E156 /* WTextField.swift */,
+				12F5282129673E4400F1BC84 /* WLabel.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			files = (
 				1294D64129647B000016E156 /* WeatherDetailVC.swift in Sources */,
 				1294D64C29647DD90016E156 /* WButton.swift in Sources */,
+				12F5282229673E4400F1BC84 /* WLabel.swift in Sources */,
 				1294D62B296479430016E156 /* AppDelegate.swift in Sources */,
 				1294D64E29647E0B0016E156 /* WTextField.swift in Sources */,
 				1294D64329647B840016E156 /* NetworkManager.swift in Sources */,

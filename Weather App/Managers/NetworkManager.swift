@@ -11,11 +11,12 @@ class NetworkManager {
     static let shared = NetworkManager()
     let baseURL = "https://api.openweathermap.org/data/2.5/weather"
     private let appid = "257a7958929f9a6fcab8e0b3070babda"
+    let metric = "&units=metric"
     
     private init() {}
     
     func fetchCityData(for cityName: String, completed: @escaping (Result<WeatherData, WError>) -> Void) {
-        let endpoint = baseURL + "?q=\(cityName)&appid=\(appid)"
+        let endpoint = baseURL + "?q=\(cityName)&appid=\(appid)\(metric)"
         guard let url = URL(string: endpoint) else {
             completed(.failure(.invalidCityName))
             return

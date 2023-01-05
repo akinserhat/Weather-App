@@ -13,24 +13,38 @@ class WeatherVC: UIViewController {
     let weatherTextField = WTextField()
     let getTheWeatherButton = WButton(title: "Get Weather Info", backgroundColor: .systemCyan)
     
+    var isCityNameEntered: Bool { return !weatherTextField.text!.isEmpty }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        assignBackground()
         createDismissKeyboard()
         configureWeatherLogoImageView()
         configureWeatherTextField()
         configureGetTheWeatherButton()
         
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: true)
-    }
     
     func createDismissKeyboard() {
         let tapGesture = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tapGesture)
     }
+    
+    func assignBackground(){
+            let background = UIImage(named: "background")
+
+            var imageView : UIImageView!
+            imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode = .scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.image = background
+            imageView.center = view.center
+            view.addSubview(imageView)
+            self.view.sendSubviewToBack(imageView)
+        }
+    
+    
     
     func configureWeatherLogoImageView() {
         view.addSubview(weatherLogoImageView)
@@ -70,6 +84,14 @@ class WeatherVC: UIViewController {
     }
     
     @objc func pushWeatherDetailVC() {
+        
+        guard isCityNameEntered else {
+            let alert = UIAlertController(title: "Empty City Name", message: "Please enter a city name.", preferredStyle: .alert)
+            let okBtn = UIAlertAction(title: "Ok", style: .default)
+            alert.addAction(okBtn)
+            self.present(alert, animated: true)
+            return
+        }
         let weatherDetailVC = WeatherDetailVC()
         weatherDetailVC.cityName = weatherTextField.text
         weatherDetailVC.title = weatherTextField.text
