@@ -25,8 +25,8 @@ class WTextField: UITextField {
         layer.cornerRadius = 12
         layer.borderWidth = 3
         layer.borderColor = UIColor.white.cgColor
-        textColor = .label
-        tintColor = .label
+        textColor = .white
+        tintColor = .white
         font = UIFont.preferredFont(forTextStyle: .title2)
         adjustsFontSizeToFitWidth = true
         backgroundColor = .systemCyan

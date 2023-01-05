@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		125B70FB296711F0001FB1AE /* WError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125B70FA296711F0001FB1AE /* WError.swift */; };
 		1294D62B296479430016E156 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1294D62A296479430016E156 /* AppDelegate.swift */; };
 		1294D62D296479430016E156 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1294D62C296479430016E156 /* SceneDelegate.swift */; };
 		1294D634296479440016E156 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1294D633296479440016E156 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		125B70FA296711F0001FB1AE /* WError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WError.swift; sourceTree = "<group>"; };
 		1294D627296479430016E156 /* Weather App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1294D62A296479430016E156 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1294D62C296479430016E156 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		125B70F9296711E4001FB1AE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				125B70FA296711F0001FB1AE /* WError.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		1294D61E296479430016E156 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		1294D629296479430016E156 /* Weather App */ = {
 			isa = PBXGroup;
 			children = (
+				125B70F9296711E4001FB1AE /* Utilities */,
 				1294D64929647CC50016E156 /* CustomViews */,
 				1294D64829647CB60016E156 /* Models */,
 				1294D64729647CA20016E156 /* Managers */,
@@ -194,6 +205,7 @@
 				1294D62B296479430016E156 /* AppDelegate.swift in Sources */,
 				1294D64E29647E0B0016E156 /* WTextField.swift in Sources */,
 				1294D64329647B840016E156 /* NetworkManager.swift in Sources */,
+				125B70FB296711F0001FB1AE /* WError.swift in Sources */,
 				1294D63F29647AB40016E156 /* WeatherVC.swift in Sources */,
 				1294D64529647BA40016E156 /* WeatherData.swift in Sources */,
 				1294D62D296479430016E156 /* SceneDelegate.swift in Sources */,

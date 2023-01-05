@@ -14,24 +14,24 @@ class NetworkManager {
     
     private init() {}
     
-    func fetchCityData(for cityName: String) {
+    func fetchCityData(for cityName: String, completed: @escaping (Result<WeatherData, WError>) -> Void) {
         let endpoint = baseURL + "?q=\(cityName)&appid=\(appid)"
         guard let url = URL(string: endpoint) else {
-            print("error")
+            completed(.failure(.invalidCityName))
             return
         }
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let _ = error {
-                print("error")
+                completed(.failure(.requestError))
             }
             
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                print("error")
+                completed(.failure(.invalidResponse))
                 return
             }
             
             guard let data = data else {
-                print("error")
+                completed(.failure(.invalidData))
                 return
             }
             
@@ -39,9 +39,9 @@ class NetworkManager {
             
             do {
                 let weathers = try decoder.decode(WeatherData.self, from: data)
-                print(weathers.wind.speed)
+                completed(.success(weathers))
             } catch {
-                print("error")
+                completed(.failure(.invalidData))
             }
         }
         
